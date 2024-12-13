@@ -1,11 +1,9 @@
 # 基础信息配置
 title: XiaomingX的个人博客
 subtitle: "技术分享与思考"
-description: >- 
+description: >
   欢迎访问我的技术博客，这里会分享编程经验和技术见解，专注于前端开发、后端架构与云原生技术
-keywords: [技术博客, 编程, 开发, 云原生]
 author: XiaomingX
-locale: "zh-CN"
 language: zh-CN
 
 # 网站URL配置
@@ -16,112 +14,30 @@ favicon: "/assets/images/favicon.ico"
 
 # 主题设置
 theme: jekyll-theme-chirpy
-chirpy:
-  skin: auto    # 自动切换明暗主题
-  date_format: "%Y-%m-%d"
-  toc: true     # 文章目录
-  
+
 # 社交媒体配置
 social:
   github: XiaomingX
   twitter: xiaomingx
-  weibo: xiaomingx
-  zhihu: xiaomingx
   email: xiaomingx@example.com
 
 # 构建设置
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
 
 # 插件配置
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-archives
-  - jekyll-tagging
-  - jekyll-assets
-  - jemoji
-  - jekyll-include-cache
 
 # 文章设置
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
-future: true
-published: true
 
 # 分页设置
 paginate: 10
 paginate_path: "/page:num/"
-
-# 归档设置
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
-# 资源优化
-sass:
-  style: compressed
-  sourcemap: never
-
-# 图片优化
-picture:
-  source: "assets/images"
-  output: "generated"
-  markup: picture
-  presets:
-    default:
-      ppi: [1, 2]
-      source_large:
-        media: "(min-width: 1024px)"
-        width: 900
-      source_medium:
-        media: "(min-width: 768px)"
-        width: 600
-      source_small:
-        media: "(max-width: 767px)"
-        width: 400
-
-# 评论系统
-comments:
-  active: disqus    # 可选：disqus, utterances, giscus
-  disqus:
-    shortname: xiaomingx-blog
-  utterances:
-    repo: xiaomingx/blog-comments
-    issue-term: pathname
-  giscus:
-    repo: xiaomingx/blog-comments
-    repo-id: your-repo-id
-    category: Comments
-    category-id: your-category-id
-
-# SEO优化
-seo:
-  date_modified: true
-twitter:
-  username: xiaomingx
-  card: summary_large_image
-facebook:
-  app_id: 
-  publisher: 
-  admins: 
-social:
-  name: XiaomingX
-  links:
-    - https://github.com/xiaomingx
-    - https://twitter.com/xiaomingx
 
 # 默认布局设置
 defaults:
@@ -131,72 +47,19 @@ defaults:
     values:
       layout: post
       author: XiaomingX
-      toc: true
-      comments: true
-      sharing: true
   - scope:
       path: ""
       type: pages
     values:
       layout: page
-      
-# 性能优化
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
-
-# 安全设置
-safe: true
 
 # 排除文件
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
   - README.md
   - LICENSE
-  - CHANGELOG.md
-  - package.json
-  - package-lock.json
-  - yarn.lock
-  - gulpfile.js
   - .git
   - .github
-  - .gitignore
-  - .sass-cache/
-  - .jekyll-cache/
-  - .jekyll-metadata
-
-# Markdown处理器设置
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-# 资源缓存
-assets:
-  compression: true
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - _assets/fonts
-  autoprefixer:
-    browsers:
-      - "last 2 versions"
-      - "IE > 9"
