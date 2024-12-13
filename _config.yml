@@ -1,0 +1,54 @@
+# 基础信息配置
+title: XiaomingX的个人博客
+description: >- 
+  欢迎访问我的技术博客，这里会分享编程经验和技术见解
+author: XiaomingX
+
+# 网站URL配置
+baseurl: "" 
+url: "https://xiaomingx.github.io"
+
+# GitHub配置
+github_username: XiaomingX
+
+# 构建设置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 文章设置
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Shanghai
+
+# 分页设置
+paginate: 10
+paginate_path: "/page:num/"
+
+# 默认布局设置
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: XiaomingX
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# 启用的Markdown扩展
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
