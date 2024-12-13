@@ -13,7 +13,7 @@ logo: "/assets/images/logo.png"
 favicon: "/assets/images/favicon.ico"
 
 # 主题设置
-theme: jekyll-theme-chirpy
+theme: minima
 
 # 社交媒体配置
 social:
