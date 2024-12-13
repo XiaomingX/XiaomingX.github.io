@@ -1,13 +1,34 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.0"
-gem "minima", "~> 2.5"
+# 指定Ruby版本
+ruby "~> 3.1"
 
-# 添加的插件
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
-gem "jekyll-sitemap"
-gem "jekyll-paginate"
+# 核心依赖
+gem "jekyll", "~> 4.3.4"
+gem "jekyll-theme-chirpy", "~> 6.0"
 
-# 如果您使用的是 GitHub Pages，您可能需要使用以下 gem：
-# gem "github-pages", group: :jekyll_plugins
+# Jekyll 插件
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-archives", "~> 2.2"
+  gem "jekyll-include-cache", "~> 0.2"
+  gem "jemoji", "~> 0.13"
+end
+
+# 性能优化相关
+gem "sass-embedded", "~> 1.58"
+gem "webrick", "~> 1.8"
+gem "mini_magick", "~> 4.12"
+
+# 开发环境依赖
+group :development do
+  gem "html-proofer", "~> 5.0"
+end
+
+# 通用依赖
+gem "tzinfo", "~> 2.0"
+gem "tzinfo-data"
+gem "wdm", "~> 0.1.1" if Gem.win_platform?
